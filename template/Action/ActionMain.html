@@ -1,0 +1,11 @@
+
+<div style="width:20%; height:100%; float:left; background-color:orange;">
+    <ActionNavigation 
+    [(ActionDataList)]="ActionDataList"
+    (OnSelected)="GetSelected($event)">
+    </ActionNavigation>
+</div>
+
+<div style="width:80%; height:100%; float:left; background-color:lightgreen;">
+    {{NowSelectedItem}}
+</div>

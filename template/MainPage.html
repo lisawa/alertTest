@@ -1,3 +1,12 @@
-<div>
-    get Test
+<div [ngStyle]="{'height': TopBarHeight + 'px'}" style="overflow:hidden;">
+    <topBar (NowSelectPage)="OnPageChange($event)"></topBar>
+</div>
+
+<div [ngStyle]="{'height': ViewHeight + 'px'}">
+    <ActionMain  *ngIf="NowPage === 'Act'"></ActionMain>
+    <EventMain   *ngIf="NowPage === 'Evt'"></EventMain>
+    <TaskMain    *ngIf="NowPage === 'Tsk'"></TaskMain>
+    <SysCtrlMain *ngIf="NowPage === 'Sys'"></SysCtrlMain>
+    <WipCtrlMain *ngIf="NowPage === 'Wip'"></WipCtrlMain>
+    <HistoryMain *ngIf="NowPage === 'His'"></HistoryMain>
 </div>

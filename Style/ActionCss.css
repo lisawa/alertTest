@@ -1,0 +1,16 @@
+.ActionNav{
+    height: 30px;
+    line-height:30px;
+    margin: 5px;
+    background-color:lightGray;
+    transition:background-color 0.2s;
+}
+
+.ActionNav:hover{
+    background-color:gray;
+}
+
+.ActionNav:active{
+    
+}
+

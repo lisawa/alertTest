@@ -1,0 +1,8 @@
+<div class="ActionNav" *ngFor="#d of ActionDataList" (click)="SelectList(d)">
+    <img src="{{d.ActionIcon}}" width="30" height="30" style="float:left">
+    <div style="float:left">{{d.ActionDesc}}</div>
+</div>
+<div class="ActionNav" (click)="SelectedSetting()">
+    <img src="svg/setting.svg" width="30" height="30" style="float:left">
+    <div style="float:left">Setting</div>
+</div>
