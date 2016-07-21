@@ -11,40 +11,40 @@ System.register(['angular2/core'], function(exports_1, context_1) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var core_1;
-    var EventTemplateListCpn;
+    var TaskCheckListCpn;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
             }],
         execute: function() {
-            EventTemplateListCpn = (function () {
-                function EventTemplateListCpn() {
-                    this.OnSelected = new core_1.EventEmitter();
+            TaskCheckListCpn = (function () {
+                function TaskCheckListCpn() {
+                    this.SelectedCheck = new core_1.EventEmitter();
                 }
-                EventTemplateListCpn.prototype.OnSelectedTemplate = function (t) {
-                    this.OnSelected.next(t);
+                TaskCheckListCpn.prototype.OnSelectCheck = function (check) {
+                    this.SelectedCheck.next(check);
                 };
                 __decorate([
                     core_1.Input(), 
                     __metadata('design:type', Array)
-                ], EventTemplateListCpn.prototype, "TemplateList", void 0);
+                ], TaskCheckListCpn.prototype, "TaskCheckList", void 0);
                 __decorate([
                     core_1.Output(), 
                     __metadata('design:type', Object)
-                ], EventTemplateListCpn.prototype, "OnSelected", void 0);
-                EventTemplateListCpn = __decorate([
+                ], TaskCheckListCpn.prototype, "SelectedCheck", void 0);
+                TaskCheckListCpn = __decorate([
                     core_1.Component({
-                        selector: 'EventTemplateList',
-                        templateUrl: 'template/Event/EventTemplateList.html',
-                        styleUrls: ['Style/EventCss.css'],
+                        selector: 'TaskCheckList',
+                        templateUrl: 'template/Task/TaskCheckList.html',
+                        styleUrls: ['Style/TaskCss.css'],
                     }), 
                     __metadata('design:paramtypes', [])
-                ], EventTemplateListCpn);
-                return EventTemplateListCpn;
+                ], TaskCheckListCpn);
+                return TaskCheckListCpn;
             }());
-            exports_1("EventTemplateListCpn", EventTemplateListCpn);
+            exports_1("TaskCheckListCpn", TaskCheckListCpn);
         }
     }
 });
-//# sourceMappingURL=EventTemplateList.js.map
+//# sourceMappingURL=TaskCheckList.js.map

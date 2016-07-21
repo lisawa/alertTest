@@ -1,12 +1,11 @@
-.ActionNav{
+.EventNav{
     height: 30px;
     line-height:30px;
-    margin: 5px;
+    margin-bottom: 5px;
     background-color:lightGray;
     transition:background-color 0.2s;
 }
 
-.ActionNav:hover{
+.EventNav:hover{
     background-color:gray;
 }
-

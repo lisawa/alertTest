@@ -26,7 +26,66 @@ System.register(['angular2/core', './EventCheckList', './EventTemplateList'], fu
         execute: function() {
             EventMainCpn = (function () {
                 function EventMainCpn() {
+                    this.EventData = [
+                        {
+                            TaskName: '',
+                            EventName: '扣留',
+                            CheckList: [
+                                {
+                                    AttritubeName: 'Lot',
+                                    AttritubeType: 'System',
+                                    Caption: '批號',
+                                    Sequence: 0,
+                                    CheckOperator: 'Like',
+                                    CheckType: 'Value',
+                                    CheckValue: 'CheckValue',
+                                }
+                            ],
+                        },
+                        {
+                            TaskName: '',
+                            EventName: '扣留次數',
+                            CheckList: [
+                                {
+                                    AttritubeName: 'Lot',
+                                    AttritubeType: 'System',
+                                    Caption: '批號',
+                                    Sequence: 0,
+                                    CheckOperator: 'Like',
+                                    CheckType: 'Value',
+                                    CheckValue: 'CheckValue',
+                                },
+                                {
+                                    AttritubeName: 'Count',
+                                    AttritubeType: 'System',
+                                    Caption: '次數',
+                                    Sequence: 1,
+                                    CheckOperator: '<',
+                                    CheckType: 'Value',
+                                    CheckValue: 'CheckValue',
+                                }
+                            ],
+                        },
+                    ];
                 }
+                EventMainCpn.prototype.GetSelectedTemplate = function (value) {
+                    this.SelectedGroup = value.CheckList;
+                };
+                EventMainCpn.prototype.GetSelectedCheck = function (value) {
+                    this.NowSelectedCheck = value.Caption;
+                };
+                __decorate([
+                    core_1.Input(), 
+                    __metadata('design:type', Array)
+                ], EventMainCpn.prototype, "EventData", void 0);
+                __decorate([
+                    core_1.Input(), 
+                    __metadata('design:type', Array)
+                ], EventMainCpn.prototype, "SelectedGroup", void 0);
+                __decorate([
+                    core_1.Input(), 
+                    __metadata('design:type', String)
+                ], EventMainCpn.prototype, "NowSelectedCheck", void 0);
                 EventMainCpn = __decorate([
                     core_1.Component({
                         selector: 'EventMain',

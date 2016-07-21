@@ -1,3 +1,5 @@
-<div>
-    Event Template
+<div style="padding:5px;">
+    <div *ngFor="#t of TemplateList" class="EventNav" (click)="OnSelectedTemplate(t)">
+        {{t.EventName}}
+    </div>
 </div>

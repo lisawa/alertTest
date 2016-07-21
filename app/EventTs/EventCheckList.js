@@ -20,11 +20,24 @@ System.register(['angular2/core'], function(exports_1, context_1) {
         execute: function() {
             EventCheckListCpn = (function () {
                 function EventCheckListCpn() {
+                    this.OnSelected = new core_1.EventEmitter();
                 }
+                EventCheckListCpn.prototype.OnSelectedCheck = function (c) {
+                    this.OnSelected.next(c);
+                };
+                __decorate([
+                    core_1.Input(), 
+                    __metadata('design:type', Array)
+                ], EventCheckListCpn.prototype, "CheckGroupList", void 0);
+                __decorate([
+                    core_1.Output(), 
+                    __metadata('design:type', Object)
+                ], EventCheckListCpn.prototype, "OnSelected", void 0);
                 EventCheckListCpn = __decorate([
                     core_1.Component({
                         selector: 'EventCheckList',
                         templateUrl: 'template/Event/EventCheckList.html',
+                        styleUrls: ['Style/EventCss.css'],
                     }), 
                     __metadata('design:paramtypes', [])
                 ], EventCheckListCpn);
