@@ -32,6 +32,6 @@ export class AppComponent{
     }
 
     constructor(){
-        this.NowPage = 'His';
+        this.NowPage = 'Act';
     }
 }

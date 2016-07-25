@@ -1,4 +1,4 @@
-System.register(['angular2/core', './ActionNavigation'], function(exports_1, context_1) {
+System.register(['angular2/core', './ActionNavigation', './LineSetting', './WeChatSetting', './EMailSetting', './ActionSetting'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,7 @@ System.register(['angular2/core', './ActionNavigation'], function(exports_1, con
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, ActionNavigation_1;
+    var core_1, ActionNavigation_1, LineSetting_1, WeChatSetting_1, EMailSetting_1, ActionSetting_1;
     var ActionMainCpn;
     return {
         setters:[
@@ -19,6 +19,18 @@ System.register(['angular2/core', './ActionNavigation'], function(exports_1, con
             },
             function (ActionNavigation_1_1) {
                 ActionNavigation_1 = ActionNavigation_1_1;
+            },
+            function (LineSetting_1_1) {
+                LineSetting_1 = LineSetting_1_1;
+            },
+            function (WeChatSetting_1_1) {
+                WeChatSetting_1 = WeChatSetting_1_1;
+            },
+            function (EMailSetting_1_1) {
+                EMailSetting_1 = EMailSetting_1_1;
+            },
+            function (ActionSetting_1_1) {
+                ActionSetting_1 = ActionSetting_1_1;
             }],
         execute: function() {
             ActionMainCpn = (function () {
@@ -40,7 +52,7 @@ System.register(['angular2/core', './ActionNavigation'], function(exports_1, con
                             ActionIcon: 'svg/mail.svg',
                         },
                     ];
-                    this.NowSelectedItem = 'non Selected';
+                    this.NowSelectedItem = 'WeChat';
                 }
                 ActionMainCpn.prototype.GetSelected = function (ad) {
                     this.NowSelectedItem = ad.ActionName;
@@ -57,7 +69,13 @@ System.register(['angular2/core', './ActionNavigation'], function(exports_1, con
                     core_1.Component({
                         selector: 'ActionMain',
                         templateUrl: 'template/Action/ActionMain.html',
-                        directives: [ActionNavigation_1.ActionNavigationCpn],
+                        directives: [
+                            ActionNavigation_1.ActionNavigationCpn,
+                            LineSetting_1.LineSettingCpn,
+                            WeChatSetting_1.WeChatSettingCpn,
+                            EMailSetting_1.EMailSettingCpn,
+                            ActionSetting_1.ActionSettingCpn,
+                        ],
                         styleUrls: ['Style/ActionCss.css']
                     }), 
                     __metadata('design:paramtypes', [])

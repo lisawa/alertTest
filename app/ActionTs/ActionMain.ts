@@ -1,13 +1,23 @@
 import {Component, Input, Output, EventEmitter} from 'angular2/core';
 
 import {ActionNavigationCpn} from './ActionNavigation';
+import {LineSettingCpn} from './LineSetting';
+import {WeChatSettingCpn} from './WeChatSetting';
+import {EMailSettingCpn} from './EMailSetting';
+import {ActionSettingCpn} from './ActionSetting';
 
 import {ActionData} from '../Model/ActionData';
 
 @Component({
     selector: 'ActionMain',
     templateUrl: 'template/Action/ActionMain.html',
-    directives: [ActionNavigationCpn],
+    directives: [
+        ActionNavigationCpn, 
+        LineSettingCpn, 
+        WeChatSettingCpn,
+        EMailSettingCpn,
+        ActionSettingCpn,
+        ],
     styleUrls: ['Style/ActionCss.css']
 })
 
@@ -20,6 +30,7 @@ export class ActionMainCpn{
     }
 
     constructor(){
+
         this.ActionDataList = [
             {
                 ActionName:'Line',
@@ -38,6 +49,6 @@ export class ActionMainCpn{
             },
         ];
 
-        this.NowSelectedItem = 'non Selected';
+        this.NowSelectedItem = 'WeChat';
     }
 }

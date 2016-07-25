@@ -9,3 +9,18 @@
 .EventNav:hover{
     background-color:gray;
 }
+
+.CheckSettingColumnName{
+    display:inline-block;
+    width:120px;
+    height:40px;
+    line-height:40px;
+}
+
+.CheckSettingInput{
+    
+}
+
+.CheckSettingInput:focus{
+    
+}

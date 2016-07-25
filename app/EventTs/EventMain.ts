@@ -5,24 +5,28 @@ import {CheckGroupData} from '../Model/CheckGroupData';
 
 import {EventCheckListCpn} from './EventCheckList';
 import {EventTemplateListCpn} from './EventTemplateList';
+import {EventSettingCpn} from './EventSetting';
+import {CheckSettingCpn} from './CheckSetting'; 
 
 @Component({
     selector: 'EventMain',
     templateUrl: 'template/Event/EventMain.html',
-    directives: [EventCheckListCpn, EventTemplateListCpn],
+    directives: [EventCheckListCpn, EventTemplateListCpn, EventSettingCpn, CheckSettingCpn],
 })
 
 export class EventMainCpn{
     @Input() EventData: EventTemplateData[];
     @Input() SelectedGroup: CheckGroupData[];
+    @Input() NowSettingCheck: CheckGroupData;
     @Input() NowSelectedCheck: string;
+    @Input() NowContentType: string;
 
     GetSelectedTemplate(value: EventTemplateData){
         this.SelectedGroup = value.CheckList;
     }
 
     GetSelectedCheck(value: CheckGroupData){
-        this.NowSelectedCheck = value.Caption;
+        this.NowSettingCheck = value;
     }
 
     constructor(){

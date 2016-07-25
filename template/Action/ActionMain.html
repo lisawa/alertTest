@@ -7,5 +7,10 @@
 </div>
 
 <div style="width:80%; height:100%; float:left; background-color:lightgreen;">
-    {{NowSelectedItem}}
+    <!--{{NowSelectedItem}}-->
+    <LineSetting *ngIf="NowSelectedItem === 'Line'"></LineSetting>
+    <WeChatSetting *ngIf="NowSelectedItem === 'WeChat'"></WeChatSetting>
+    <EMailSetting *ngIf="NowSelectedItem === 'Email'"></EMailSetting>
+    <ActionSetting *ngIf="NowSelectedItem === 'Setting'"></ActionSetting>
+    
 </div>
