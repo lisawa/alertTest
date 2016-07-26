@@ -1,5 +1,5 @@
 export class HistorianData{
-    ActionName: string;
-    ActionDesc: string;
-    ActionIcon: string;
+    RuleChecked: boolean;
+    TaskChecked: boolean;
+    EventChecked: boolean;
 }
