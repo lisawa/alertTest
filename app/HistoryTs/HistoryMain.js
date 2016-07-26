@@ -24,6 +24,21 @@ System.register(['angular2/core', '../TestComponent/InkButton'], function(export
             HistoryMainCpn = (function () {
                 function HistoryMainCpn() {
                 }
+                HistoryMainCpn.prototype.OnSelectPage = function (value) {
+                    this.NowSelectPage.next(value);
+                };
+                __decorate([
+                    core_1.Input(), 
+                    __metadata('design:type', String)
+                ], HistoryMainCpn.prototype, "Geta", void 0);
+                __decorate([
+                    core_1.Input(), 
+                    __metadata('design:type', String)
+                ], HistoryMainCpn.prototype, "BtnColor", void 0);
+                __decorate([
+                    core_1.Input(), 
+                    __metadata('design:type', String)
+                ], HistoryMainCpn.prototype, "Color", void 0);
                 HistoryMainCpn = __decorate([
                     core_1.Component({
                         selector: 'HistoryMain',

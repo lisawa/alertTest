@@ -9,5 +9,12 @@ import {InkButton} from '../TestComponent/InkButton';
 })
 
 export class HistoryMainCpn{
-    
+    @Input() Geta: string;
+    @Input() BtnColor: string;
+    @Input() Color: string;
+
+     OnSelectPage(value){
+        this.NowSelectPage.next(value);
+    }
+
 }
