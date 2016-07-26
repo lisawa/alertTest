@@ -1,7 +1,8 @@
-<div style="width: 20%; height:100%; background-color:BlanchedAlmond; float:left;">
-    This is History Main Page.
-</div>
-
-<div style="width: 80%; height:100%; background-color:LightYellow; float:left;">
-    This is Status Main Page.
+<div style="width:100%; height:100%; background-color:skyblue; padding:15px;">
+    <InkButton class="Btn" [Text]="'規則'" (OnClick)="SelectTarget('Rule')" ></InkButton>
+    <InkButton class="Btn" [Text]="'任務'" (OnClick)="SelectTarget('Task')" ></InkButton>
+    <InkButton class="Btn" [Text]="'事件'" (OnClick)="SelectTarget('Event')" ></InkButton>
+    <InkButton class="Btn" [Text]="'交易'" (OnClick)="SelectTarget('Transaction')" ></InkButton>
+    <InkButton class="Btn" [Text]="'動作'" (OnClick)="SelectTarget('Action')" ></InkButton>
+    <InkButton class="Btn" [Text]="'使用者'" (OnClick)="SelectTarget('User')" ></InkButton>
 </div>
