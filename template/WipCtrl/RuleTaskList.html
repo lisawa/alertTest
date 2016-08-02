@@ -1,0 +1,8 @@
+﻿<div>
+    <div *ngFor="#r of ruleList">
+        <div (click)="ChangeDisplay(r)">{{r.RuleName}}</div>
+        <div *ngFor="#t of r.TaskList" [hidden]="!r.Display" (click)="SelectedEvent(t)">
+            {{t.TaskName}}
+        </div>      
+    </div>
+</div>
