@@ -1,4 +1,4 @@
-System.register(['angular2/core', '../Model/CheckGroupData', './EventCheckList', './EventTemplateList', './EventSetting', './CheckSetting'], function(exports_1, context_1) {
+System.register(['angular2/core', '../Model/EventTemplateData', '../Model/CheckGroupData', './EventCheckList', './EventTemplateList', './EventSetting', './CheckSetting'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,12 +10,15 @@ System.register(['angular2/core', '../Model/CheckGroupData', './EventCheckList',
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, CheckGroupData_1, EventCheckList_1, EventTemplateList_1, EventSetting_1, CheckSetting_1;
+    var core_1, EventTemplateData_1, CheckGroupData_1, EventCheckList_1, EventTemplateList_1, EventSetting_1, CheckSetting_1;
     var EventMainCpn;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
+            },
+            function (EventTemplateData_1_1) {
+                EventTemplateData_1 = EventTemplateData_1_1;
             },
             function (CheckGroupData_1_1) {
                 CheckGroupData_1 = CheckGroupData_1_1;
@@ -35,6 +38,7 @@ System.register(['angular2/core', '../Model/CheckGroupData', './EventCheckList',
         execute: function() {
             EventMainCpn = (function () {
                 function EventMainCpn() {
+                    this.NowContentType = 'Check';
                     this.EventData = [
                         {
                             TaskName: '',
@@ -78,15 +82,22 @@ System.register(['angular2/core', '../Model/CheckGroupData', './EventCheckList',
                     ];
                 }
                 EventMainCpn.prototype.GetSelectedTemplate = function (value) {
+                    this.NowContentType = 'Event';
                     this.SelectedGroup = value.CheckList;
+                    this.NowSettingEvent = value;
                 };
                 EventMainCpn.prototype.GetSelectedCheck = function (value) {
+                    this.NowContentType = 'Check';
                     this.NowSettingCheck = value;
                 };
                 __decorate([
                     core_1.Input(), 
                     __metadata('design:type', Array)
                 ], EventMainCpn.prototype, "EventData", void 0);
+                __decorate([
+                    core_1.Input(), 
+                    __metadata('design:type', EventTemplateData_1.EventTemplateData)
+                ], EventMainCpn.prototype, "NowSettingEvent", void 0);
                 __decorate([
                     core_1.Input(), 
                     __metadata('design:type', Array)

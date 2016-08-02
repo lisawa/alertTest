@@ -43,7 +43,7 @@ System.register(['angular2/core', './TopBar', './ActionTs/ActionMain', './EventT
                 function AppComponent() {
                     this.TopBarHeight = 80;
                     this.ViewHeight = window.innerHeight - this.TopBarHeight;
-                    this.NowPage = 'Act';
+                    this.NowPage = 'Evt';
                 }
                 AppComponent.prototype.OnPageChange = function (value) {
                     this.NowPage = value;

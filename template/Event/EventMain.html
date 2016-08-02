@@ -12,7 +12,7 @@
 
 <div style="width:80%; height:100%; float:left; background-color:lightgreen;"
     >
-    <EventSetting></EventSetting>
-    <!--<CheckSetting [CheckGroup]="NowSettingCheck"></CheckSetting>-->
+    <EventSetting *ngIf="NowContentType === 'Event'" [NowSettingEvent]="NowSettingEvent"></EventSetting>
+    <CheckSetting *ngIf="NowContentType === 'Check'" [CheckGroup]="NowSettingCheck"></CheckSetting>
     <!--{{NowSelectedCheck}}-->
 </div>
