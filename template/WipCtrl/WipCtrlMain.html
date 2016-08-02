@@ -1,21 +1,17 @@
+<script src="node_modules/ng2-bs3-modal/bundles/ng2-bs3-modal.js"></script>
 <div style="width: 20%; height:100%; background-color:LightSeaGreen; float:left;">
     <div style="height:50%">
-        <div *ngFor="#r of RuleList">
-            <div>{{r.RuleName}}</div>
-            <div *ngFor="#t of r.TaskList">
-                <div>{{t.TaskName}}
-                    <div *ngFor="#e of t.EventList">
-                        <div>{{e.EventDescription}}</div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <RuleTaskList (OnSelectTask)="GetSelectedTask($event)"></RuleTaskList>
     </div>
     <div style="height:50%">
-        
+        <TaskEventAction></TaskEventAction>
     </div>
 </div>
 
 <div style="width: 80%; height:100%; background-color:LightSeaGreen; float:left;">
-    This is Wip Event Page.
+    <h3>User</h3>
+    <!--<h3>{{selectedUsers|json}}</h3>-->
+    <div *ngFor="#user of users" id={{user.id}} (click)="toggleMultiSelect($event, user)" [hidden]="user.selected" >{{user.name}}</div>
+    <h3>Selected</h3>
+    <div *ngFor="#user of selectedUsers" id={{user.id}} (click)="toggleMultiSelect($event, user)">{{user.name}}</div>
 </div>
