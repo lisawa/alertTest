@@ -10,17 +10,54 @@
     background-color:gray;
 }
 
-.CheckSettingColumnName{
+.EventSettingColumnName{
     display:inline-block;
     width:120px;
     height:40px;
     line-height:40px;
+    border-style:solid;
+    border-width:2px;
+    border-color:transparent lightgray transparent transparent;
 }
 
-.CheckSettingInput{
-    
+.EventSettingList{
+    border-style:solid;
+    border-width:3px;
+    border-color:transparent transparent lightgray transparent;
 }
 
-.CheckSettingInput:focus{
-    
+.EventSettingInput{
+    background-color: transparent;
+    border-style: none;
+    border-color:  rgba(200,200,200,0.5);
+    height:30px;
+    font-size:16pt;
+    width:500px;
+}
+
+.EventSettingInput:focus{
+    outline:none;
+    background-color:rgba(230,230,230,1);
+}
+
+.OKbtn{
+    margin:20px;
+    color:white;
+    background-color:rgb(51, 122, 183);
+    border-radius:10px;
+    border-style:none;
+    width:100px;
+    height:40px;
+}
+
+.OKbtn:hover{
+    background-color:rgb(31, 102, 163);
+}
+
+.OKbtn:active{
+    background-color:rgb(11, 82, 143);
+}
+
+.OKbtn:focus{
+    outline:none;
 }

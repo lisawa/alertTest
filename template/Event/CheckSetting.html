@@ -1,32 +1,33 @@
-<div style="height:100%: width:100%; background-color:white;">
-    <div>
-        <div class="CheckSettingColumnName">欄位名稱：</div>
-        <input class="CheckSettingInput" type="text" [(ngModel)]="CheckGroup.AttritubeName" />
+<div style="height:100%; padding:10px; background-color:white;">
+    <div class="EventSettingList">
+        <div class="EventSettingColumnName">欄位名稱：</div>
+        <input class="EventSettingInput" type="text" [(ngModel)]="CheckGroup.AttritubeName" />
     </div>
-    <div>
-        <div class="CheckSettingColumnName">屬性型態：</div>
-        <input type="text" [(ngModel)]="CheckGroup.AttritubeType" />
+    <div class="EventSettingList">
+        <div class="EventSettingColumnName">屬性型態：</div>
+        <input class="EventSettingInput" type="text" [(ngModel)]="CheckGroup.AttritubeType" />
     </div>
-    <div>
-        <div class="CheckSettingColumnName">屬性名稱：</div>
-        <input type="text" [(ngModel)]="CheckGroup.Caption" />
+    <div class="EventSettingList">
+        <div class="EventSettingColumnName">屬性名稱：</div>
+        <input class="EventSettingInput" type="text" [(ngModel)]="CheckGroup.Caption" />
     </div>
-    <div>
-        <div class="CheckSettingColumnName">屬性排序：</div>
-        <input type="text" [(ngModel)]="CheckGroup.Sequence" />
+    <div class="EventSettingList">
+        <div class="EventSettingColumnName">屬性排序：</div>
+        <input class="EventSettingInput" type="text" [(ngModel)]="CheckGroup.Sequence" />
     </div>
-    <div>
-        <div class="CheckSettingColumnName">比對運算子：</div>
-        <input type="text" [(ngModel)]="CheckGroup.CheckOperator" />
+    <div class="EventSettingList">
+        <div class="EventSettingColumnName">比對運算子：</div>
+        <input class="EventSettingInput" type="text" [(ngModel)]="CheckGroup.CheckOperator" />
     </div>
-    <div>
-        <div class="CheckSettingColumnName">屬性類別：</div>
-        <input type="text" [(ngModel)]="CheckGroup.CheckType" />
+    <div class="EventSettingList">
+        <div class="EventSettingColumnName">屬性類別：</div>
+        <input class="EventSettingInput" type="text" [(ngModel)]="CheckGroup.CheckType" />
     </div>
-    <div>
-        <div class="CheckSettingColumnName">屬性值：</div>
-        <input type="text" [(ngModel)]="CheckGroup.CheckValue" />
+    <div class="EventSettingList">
+        <div class="EventSettingColumnName">屬性值：</div>
+        <input class="EventSettingInput" type="text" [(ngModel)]="CheckGroup.CheckValue" />
     </div>
 
-    <button>OK</button>
+    <button class="OKbtn">OK</button>
+    <button class="OKbtn" style="background-color:blue;">OK</button>
 </div>

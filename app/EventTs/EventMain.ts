@@ -16,20 +16,25 @@ import {CheckSettingCpn} from './CheckSetting';
 
 export class EventMainCpn{
     @Input() EventData: EventTemplateData[];
+    @Input() NowSettingEvent:EventTemplateData;
     @Input() SelectedGroup: CheckGroupData[];
     @Input() NowSettingCheck: CheckGroupData;
     @Input() NowSelectedCheck: string;
     @Input() NowContentType: string;
 
     GetSelectedTemplate(value: EventTemplateData){
+        this.NowContentType = 'Event';
         this.SelectedGroup = value.CheckList;
+        this.NowSettingEvent = value;
     }
 
     GetSelectedCheck(value: CheckGroupData){
+        this.NowContentType = 'Check';
         this.NowSettingCheck = value;
     }
 
     constructor(){
+        this.NowContentType = 'Check';
         this.EventData = [
             {
                 TaskName: '',
